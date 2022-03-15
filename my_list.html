@@ -1,0 +1,96 @@
+
+Dashboard
+SE-PT-07_P0
+Experiencing HTML Lab
+
+Experiencing HTML Lab
+Start Assignment
+Due No Due Date  Points 1  Submitting a website url
+Fork This AssignmentGitHub RepoCreate New Issue
+Learning Goals
+Create an ordered HTML list
+Create an unordered HTML list
+Introduction
+How do we go about writing text for the web? How is that different from the text that we write in a text file? We're going to experience for ourselves how these things are different in this lab.
+
+You don't need any prior knowledge of HTML for this lab. We're going to tell you what to type. Don't focus on specific commands or taking notes. Everything will be covered thoroughly later. Instead, the goal of this exercise is to feel the joy of editing a file and seeing the change "out there."
+
+NOTE: We don't expect you to know markup, content, source text, or rendered text yet. We'll be defining them in this lab.
+
+Getting Started
+If you haven't already, fork and clone this lesson into your local environment.
+
+Quick Review: To fork this lab, click the Fork icon in the upper right of this page. This will bring you to GitHub. You may be prompted to choose where to fork - choose your personal GitHub account.
+Once your fork is created, click the Code button in GitHub, choose SSH and copy the provided git URL info.
+Clone to your local machine with git clone followed by the git URL you copied. This will create a folder in the location you're currently in containing your fork of this lab's repository.
+Navigate into the newly created directory in the terminal, then run code . to open the files in Visual Studio Code. (If you are using a different text editor, the command will be different. For the AWS Cloud9 IDE, for example, you must click on the file in the left navigation to open it) Finally, run bundle to install the lab's dependencies.
+
+Note: This lab's test use Ruby, so the commands we'll use are different than what you've seen before - npm install and npm test. Here, we use bundle and rspec to do the same things.
+Create an Unordered HTML List
+Think of a collection of things united by theme: Pokémon, Old-school MC's, Prime Ministers of New Zealand, Magical Beasts and Where to Find Them, etc. We're going to walk through how to create a list of these things marked up with HTML.
+
+Create a Text File with Content
+In your terminal, choose a location to practice in and navigate to it.
+
+Create a new file called my_list.txt. The file extension suggests to humans and operating systems that it contains text.
+
+Remember your collection of things? Now write in a few of them in your file. Here's an example from us (songs in the English post-punk genre).
+
+"Love Will Tear Us Apart"
+"Bela Lugosi's Dead"
+"A Forest"
+"Nine While Nine"
+"Girlfriend In a Coma"
+The material we typed into the file is called the content. It's the thing we're trying to communicate.
+
+Content as a List in a Text File
+A problem with our content is that it doesn't explicitly state anywhere that it's a list. In the example, we see a list of songs. But a browser doesn't know what a "list" is.
+
+We need to help browser know what a list is. The secret is to add "notes" or "breadcrumbs" to the content that tell the browser that it has list items and that these items "go together" in a list. To add these "notes" we surround the content with bits of markup, with bits of HTML.
+
+We will take the text content from our text file, paste it into a new HTML file and then we will add markup so that a browser "sees" a list. Let's write an HTML file!
+
+Text Inside an HTML File
+Now we're going to create an HTML list together.
+
+Create a new file called my_list.html
+Copy the contents of my_list.txt and paste them into my_list.html
+Save the my_list.html file
+Open the my_list.html file. For Mac users, you can do this with open my_list.html. For Windows users, you can do this in your Ubuntu app with explorer.exe index.html. Make sure you've set Chrome as your default browser (Links to an external site.).
+Hit enter to run the command
+Note: If you are using the AWS Cloud9 IDE, the process for opening HTML files is slightly different. In the lefthand file navigation, right click my_list.html (command + click for Mac users). In the context menu that appears, click the Preview option
+aws preview
+This will open the HTML page as a new tab in the IDE. You can also open this preview tab as a separate browser tab by clicking the 'pop out' button in the upper right corner of the tab
+pop out button
+We see:
+
+HTML file with non-marked-up content displays on one line
+
+As noted above, the browser doesn't know that items on new lines means "items in a list." Browsers ignore when HTML has is split onto new lines. We cover why a little later in this README. Since the browser doesn't know we intend this to be a list and since browsers ignore when content is split onto different lines, it displays all the content on one line. Not what we wanted.
+
+A Text Not-Really-A-List Into a Real-HTML-List
+REMEMBER: This lab will provide you what to type. Subsequent labs will deeply examine details of HTML markup. However, our goal here is to show how slight changes to markup can quickly alter the browser's display of content. If you're fuzzy on a detail that's fine.
+Marking-Up List Items
+OK, we've reached the critical moment. We're going to tell the browser that these bits of letters represent list items. To do so we "wrap" each line with <li> and </li>. For example: <li>"A Forest"</li>
+
+<li>"Love Will Tear Us Apart"</li>
+<li>"Bela Lugosi's Dead"</li>
+<li>"A Forest"</li>
+<li>"Nine While Nine"</li>
+<li>"Girlfriend In a Coma"</li>
+Flip back to the viewing tab and refresh the page. You should see something like the following:
+
+Songlist
+
+AWESOME.
+
+In this step we added some HTML markup:
+<h1>My Music List</h1>
+<p>Some of my favorite post-punk and Goth songs!</p>
+<ul>
+  <li>"Love Will Tear Us Apart"</li>
+  <li>"Bela Lugosi's Dead"</li>
+  <li>"A Forest"</li>
+  <li>"Nine While Nine"</li>
+  <li>"Girlfriend In a Coma"</li>
+</ul>
